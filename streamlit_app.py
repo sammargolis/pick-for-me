@@ -37,7 +37,7 @@ else:
         st.session_state.messages = []
 
     # Display the existing chat messages via `st.chat_message`.
-    for message in st.session_state.messages:
+    for message in st.session_state.messages[1:]:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
